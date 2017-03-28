@@ -14,6 +14,6 @@ while True:
     if len(user_input)==0:continue
     if user_input=='q':break
     sk.send(bytes(user_input,encoding='utf8'))
-    server_reply=sk.recv(1024)
+    server_reply=sk.recv(8192)
     print(str(server_reply,'utf8'))
 sk.close()
